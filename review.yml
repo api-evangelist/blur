@@ -1,0 +1,116 @@
+aid: blur
+name: Blur
+review_date: '2026-05-30'
+scope: Public developer API availability for the Blur NFT marketplace and Blend lending protocol
+reviewer: API Evangelist
+sources:
+  - https://blur.io
+  - https://blur.foundation
+  - https://docs.blur.foundation
+  - https://docs.blur.foundation/contracts
+  - https://docs.blur.foundation/metrics
+  - https://docs.blur.foundation/tokenomics
+  - https://gov.blur.foundation
+  - https://github.com/blur-io
+  - https://github.com/blur-io/operator-filter-registry
+findings:
+  public_rest_api: false
+  public_graphql_api: false
+  public_websocket_api: false
+  public_openapi: false
+  public_webhooks_documented: false
+  public_sdk_release: false
+  public_developer_self_service: false
+  public_developer_portal: false
+  authentication_required_for_api_docs: false
+  on_chain_integration_available: true
+  reverse_engineered_endpoints_in_use: true
+summary: >-
+  Blur does not publish a documented public developer API or SDK. There is no
+  developer portal, no public REST/GraphQL reference, no AsyncAPI/OpenAPI
+  specification, no published WebSocket catalog, and no webhook subscription
+  surface. The Blur Foundation documentation at docs.blur.foundation is scoped
+  to tokenomics, contract addresses, governance, and marketplace metrics — not
+  to programmatic developer integration. Public integration with Blur happens
+  primarily on-chain via the deployed marketplace and Blend smart contracts
+  (Seaport-compatible), and off-chain marketplace data is generally reached
+  through third-party indexers (Bitquery, SimpleHash, Alchemy, Dune) rather
+  than a Blur-operated public endpoint. The blur.io web application is backed
+  by undocumented internal endpoints (commonly observed under core-api.prod.
+  blur.io and related hostnames) that the community has reverse-engineered for
+  trading bots, sweep tooling, and analytics, but these are not officially
+  documented, supported, versioned, or covered by published terms of use for
+  third-party developers.
+documented_surfaces:
+  - kind: Smart Contracts (on-chain)
+    public: true
+    notes: >-
+      Marketplace and Blend lending contracts are deployed on Ethereum and
+      addresses/ABIs are referenced under docs.blur.foundation/contracts.
+      Integration is via standard Ethereum tooling (ethers, web3, viem, foundry)
+      against Seaport-compatible orders and Blend lending primitives. This is
+      the only first-party, publicly documented programmatic surface.
+  - kind: REST API
+    public: false
+    notes: >-
+      No public REST API is published. The blur.io frontend consumes internal
+      JSON endpoints (commonly seen at core-api.prod.blur.io) that are not
+      documented, not versioned, and not offered as a developer product.
+      Community wrappers exist but rely on reverse-engineering and may break
+      without notice.
+  - kind: GraphQL API
+    public: false
+    notes: >-
+      No public GraphQL endpoint or schema is documented by Blur or the Blur
+      Foundation.
+  - kind: WebSocket API
+    public: false
+    notes: >-
+      Blur's UI uses real-time updates (orderbook, mempool sniping signals,
+      pricing) over internal websocket channels, but no public WebSocket
+      contract, channel catalog, or message schema is published. No AsyncAPI
+      specification exists.
+  - kind: Webhooks
+    public: false
+    notes: >-
+      No public webhook catalog, event list, payload schema, or subscription
+      mechanism is documented. On-chain event subscription via standard
+      Ethereum log filtering or third-party indexers is the practical
+      substitute.
+  - kind: SDK / CLI
+    public: false
+    notes: >-
+      No Blur-published SDK, client library, or CLI exists for the marketplace
+      or Blend. The github.com/blur-io organization publishes the operator
+      filter registry and select contracts but no developer SDK.
+  - kind: Third-party data access
+    public: true
+    notes: >-
+      Blur marketplace activity and Blend lending data are routinely consumed
+      via third-party indexers such as Bitquery, SimpleHash, Alchemy, Reservoir,
+      and Dune — these are not Blur-operated APIs but are the practical
+      off-chain integration path.
+  - kind: Foundation / Governance surfaces
+    public: true
+    notes: >-
+      blur.foundation, gov.blur.foundation, and docs.blur.foundation expose
+      human-readable governance, tokenomics, contracts, metrics, and brand
+      assets. These are documentation/governance surfaces, not developer APIs.
+asyncapi_recommended: false
+openapi_recommended: false
+reason_no_spec: >-
+  Blur publishes no stable, addressable, officially supported REST, GraphQL,
+  or WebSocket endpoint with a documented contract. Authoring an OpenAPI or
+  AsyncAPI specification would require codifying reverse-engineered internal
+  endpoints that Blur has not sanctioned for third-party use, which violates
+  the no-fabrication rule. Only this review.yml is produced; no openapi/ or
+  asyncapi/ artifact is created. On-chain ABIs are the appropriate machine-
+  readable contract for the marketplace and Blend, and those live with the
+  deployed contracts.
+apis_yml_updated: false
+apis_yml_reason: >-
+  Existing apis.yml already accurately characterizes Blur as having no
+  official public developer API or SDK, with on-chain integration via
+  Seaport-compatible marketplace and Blend contracts and off-chain data
+  reached through third-party indexers. No new public surface was discovered
+  that warrants an update.
