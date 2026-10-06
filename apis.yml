@@ -69,10 +69,12 @@ tags:
   - Pro Trading
 url: https://raw.githubusercontent.com/api-evangelist/blur/refs/heads/main/apis.yml
 created: '2026-05-24'
-modified: '2026-05-24'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis: []
 common:
+  - url: https://blur.io/blog
+    type: Blog
   - type: VulnerabilityDisclosure
     url: security/blur-vulnerability-disclosure.yml
   - type: DomainSecurity
