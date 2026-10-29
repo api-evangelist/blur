@@ -1,4 +1,4 @@
-# blur
+# Blur
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,4 +64,89 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Blur — Ethereum NFT marketplace and aggregator for pro traders (Blend lending, BLUR token, Blur Foundation)
+Blur is a New York-based NFT marketplace and aggregator built for professional traders on Ethereum, founded by the pseudonymous "Pacman" (Tieshun Roquerre) in October 2022 and backed by Paradigm and Standard Crypto. The flagship product, blur.io, offers zero marketplace fees, multi-marketplace sweeping, bulk listing/bidding, real-time mempool reveal sniping, and a portfolio-grade analytics surface that aggregates liquidity from OpenSea, X2Y2, LooksRare, and other Seaport-compatible venues. Blur also operates Blend, a peer-to-peer perpetual NFT lending protocol designed by Paradigm researchers that powers ETH-against-NFT borrowing and Buy-Now-Pay-Later flows without oracles or fixed expiries — Blend has captured the dominant share of NFT lending volume on Ethereum. The BLUR token, distributed via multi-season airdrop campaigns, governs the Blur DAO through the Blur Foundation. The same team launched Blast, an Ethereum L2 with native yield, which now hosts its own NFT activity. Blur does not publish an official public developer API or SDK; on-chain integration happens via the deployed marketplace and Blend smart contracts (Seaport-compatible), and marketplace data is reached through third-party indexers such as Bitquery, SimpleHash, and Alchemy rather than a Blur-operated REST or GraphQL endpoint.
+
+**Areas:** NFT · NFT Marketplace · NFT Aggregator · NFT Lending · Ethereum · Web3 · Blockchain · DeFi · Smart Contracts · Seaport · Blend · BLUR Token
+
+## Blur on APIs.io
+
+Everything profiled for Blur is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blur/](https://apis.io/providers/blur/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### GraphQL (1)
+
+GraphQL schemas.
+
+- [Moved to /providers/blur/](https://apis.io/graphqls/blur/blur-graphql/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Blur Domain Security](https://apis.io/security/blur/blur-domain-security/)
+- [Blur Vulnerability Disclosure](https://apis.io/security/blur/blur-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://blur.io)
+- [Documentation](https://docs.blur.foundation)
+- [Blog](https://blur.io/blog)
+- [Terms of service](https://drive.google.com/file/d/1MruZnfSInUcz71z6UYoHaDA2rOiWYSgI/view)
+
+## API Evangelist rating
+
+**Kin Score 11.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 10.5 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blur/](https://apis.io/providers/blur/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Blur: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blur/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
